@@ -2,7 +2,7 @@
 
 namespace BMSAPI.Repository.Commands.Command
 {
-    public class UpdateBlogCommand:IRequest
+    public class UpdateBlogCommand:IRequest<int>
     {
         public int Id { get; set; }
         public string Username { get; set; }

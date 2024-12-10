@@ -1,4 +1,6 @@
-﻿using BMSAPI.Repository;
+﻿using BMSAPI.Entities.Commands.Handlers;
+using BMSAPI.Repository;
+using BMSAPI.Repository.Commands.Handlers;
 using BMSAPI.Repository.interfaces;
 
 namespace BMSAPI.Extensions
@@ -9,6 +11,8 @@ namespace BMSAPI.Extensions
         {
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IBlogRepository, BlogRepository>();
+            services.AddMediatR(c => c.RegisterServicesFromAssemblyContaining<CreateBlogCommandHandler>());
+            services.AddMediatR(c => c.RegisterServicesFromAssemblyContaining<UpdateBlogCommandHandler>());
             return services;
         }
     }
