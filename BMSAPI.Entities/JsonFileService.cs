@@ -17,9 +17,9 @@ namespace BMSAPI.Entities
             var json = File.ReadAllText(_filePath);
             return JsonConvert.DeserializeObject<List<Blog>>(json) ?? new List<Blog>();
         }
-        public void SaveBlogPosts(List<Blog> blogPosts) 
+        public void SaveBlog(List<Blog> blog) 
         {
-            var json = JsonConvert.SerializeObject(blogPosts, Newtonsoft.Json.Formatting.Indented);
+            var json = JsonConvert.SerializeObject(blog, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(_filePath, json);
         }
     }

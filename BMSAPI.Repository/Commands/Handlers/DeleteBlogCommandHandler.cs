@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BMSAPI.Entities.Commands.Command
+namespace BMSAPI.Entities.Commands.Handlers
 {
-    internal class UpdateBlogCommand
+    public class DeleteBlogCommandHandler
     {
     }
 }

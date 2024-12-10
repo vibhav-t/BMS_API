@@ -8,5 +8,8 @@ namespace BMSAPI.Repository.interfaces
 {
     public interface IUnitOfWork
     {
+        public IBlogRepository blogRepository{ get;}
+
+        Task SaveAsync();
     }
 }

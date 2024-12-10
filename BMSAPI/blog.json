@@ -1,3 +1,20 @@
-{
-
-}
+[
+  {
+    "Id": 1,
+    "Username": "user1",
+    "DateCreated": "2024-12-10T00:00:00Z",
+    "Text": "This is the first blog post."
+  },
+  {
+    "Id": 2,
+    "Username": "user2",
+    "DateCreated": "2024-12-11T00:00:00Z",
+    "Text": "This is the second blog post."
+  },
+  {
+    "Id": 3,
+    "Username": "user3",
+    "DateCreated": "2024-12-10T17:48:08.457Z",
+    "Text": "Blog 3"
+  }
+]
