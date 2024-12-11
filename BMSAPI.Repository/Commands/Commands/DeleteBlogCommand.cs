@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace BMSAPI.Repository.Commands.Command
 {
-    public class DeleteBlogCommand
+    public class DeleteBlogCommand:IRequest
     {
+        public int Id
+        {
+            get; set;
+        }
     }
 }

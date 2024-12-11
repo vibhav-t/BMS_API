@@ -13,6 +13,7 @@ namespace BMSAPI.Extensions
             services.AddTransient<IBlogRepository, BlogRepository>();
             services.AddMediatR(c => c.RegisterServicesFromAssemblyContaining<CreateBlogCommandHandler>());
             services.AddMediatR(c => c.RegisterServicesFromAssemblyContaining<UpdateBlogCommandHandler>());
+            services.AddMediatR(c => c.RegisterServicesFromAssemblyContaining<DeleteBlogCommandHandler>());
             return services;
         }
     }
