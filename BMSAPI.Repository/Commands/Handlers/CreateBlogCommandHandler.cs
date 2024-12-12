@@ -14,7 +14,7 @@ namespace BMSAPI.Repository.Commands.Handlers
         }
         public async Task<int> Handle(CreateBlogCommand request, CancellationToken cancellationToken)
         {
-            var post = new Blog { Username = request.Username, DateCreated = request.Date, Text = request.Text };
+            var post = new Blog { Username = request.Username, DateCreated = request.DateCreated, Text = request.Text };
             _unitOfWork.blogRepository.Add(post);
             await _unitOfWork.SaveAsync();
             return post.Id;

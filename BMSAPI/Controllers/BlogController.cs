@@ -1,4 +1,5 @@
 ﻿using BMSAPI.Entities.Model;
+using BMSAPI.Helpers;
 using BMSAPI.Repository.Commands.Command;
 using BMSAPI.Repository.Queries.Queries;
 using MediatR;
@@ -42,9 +43,18 @@ namespace BMSAPI.Controllers
             return await _mediator.Send(new GetBlogByIDQuery { Id = id });
         }
         [HttpPost]
-        public async Task<int> Create(CreateBlogCommand command)
+        public async Task<IActionResult> Create(CreateBlogCommand command)
         {
-            return await _mediator.Send(command);
+            var response=await _mediator.Send(command);
+            if (response>0)
+            {
+                return Ok(new ApiResponse(StatusCodes.Status200OK, "Blog item added!!"));
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, "Failed to add blog item");
+            }
+            
         }
 
         /// <summary>
@@ -61,7 +71,14 @@ namespace BMSAPI.Controllers
                 return BadRequest();
             }
             var response=await _mediator.Send(command);
-            return Ok(response);
+            if (response > 0)
+            {
+                return Ok(new ApiResponse(StatusCodes.Status200OK, "Blog item updated!!"));
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, "Failed to update blog item");
+            }
         }
 
         /// <summary>
@@ -72,8 +89,15 @@ namespace BMSAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _mediator.Send(new DeleteBlogCommand(id));
-            return Ok();
+            var response=await _mediator.Send(new DeleteBlogCommand { Id=id});
+            if (response)
+            {
+                return Ok(new ApiResponse(StatusCodes.Status200OK, "Blog item deleted!!"));
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, "Failed to delete blog item");
+            }
         }
         #endregion
     }

@@ -13,14 +13,14 @@
   },
   {
     "Id": 3,
-    "Username": "string",
-    "DateCreated": "2024-12-10T18:28:40.689Z",
-    "Text": "string"
+    "Username": "vibhav",
+    "DateCreated": "2024-12-12T00:00:00",
+    "Text": "My blog text!!"
   },
   {
     "Id": 4,
-    "Username": "user4",
-    "DateCreated": "2024-12-11T16:39:14.626Z",
-    "Text": "This is sample blog text for user4"
+    "Username": "krishna T",
+    "DateCreated": "2024-12-12T00:00:00",
+    "Text": "Krishna blog !!"
   }
 ]

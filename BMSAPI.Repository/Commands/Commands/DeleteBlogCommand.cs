@@ -8,12 +8,8 @@ using System.Threading.Tasks;
 
 namespace BMSAPI.Repository.Commands.Command
 {
-    public class DeleteBlogCommand:IRequest
+    public class DeleteBlogCommand:IRequest<bool>
     {
-        public int Id{get; set;}
-        public DeleteBlogCommand(int blogId) 
-        {
-            Id = blogId;
-        }
+        public int Id{get; set;}        
     }
 }

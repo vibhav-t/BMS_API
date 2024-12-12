@@ -1,12 +1,6 @@
 using BMSAPI.Entities;
+using BMSAPI.ExceptionMiddleware;
 using BMSAPI.Extensions;
-using BMSAPI.Repository;
-using BMSAPI.Repository.Commands.Command;
-using BMSAPI.Repository.Commands.Handlers;
-using BMSAPI.Repository.interfaces;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,7 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 app.UseCors("_AllowedOriginPolicy");
 app.UseAuthorization();

@@ -15,9 +15,9 @@ namespace BMSAPI.Entities.Commands.Handlers
         public async Task<int> Handle(UpdateBlogCommand request, CancellationToken cancellationToken)
         {
             var post = await _unitOfWork.blogRepository.GetByIdAsync(request.Id);
-            //if (post == null) throw new NotFoundException(nameof(Blog), request.Id);
+            if (post == null) throw new Exception("Not Found");
             post.Username = request.Username;
-            post.DateCreated = request.Date;
+            post.DateCreated = request.DateCreated;
             post.Text = request.Text;
             _unitOfWork.blogRepository.Update(post);
             await _unitOfWork.SaveAsync();

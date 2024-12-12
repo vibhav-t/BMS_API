@@ -19,7 +19,10 @@ namespace BMSAPI.Repository.Queries.Handlers
         }
         public async Task<Blog> Handle(GetBlogByIDQuery request, CancellationToken cancellationToken)
         {
-            return await _unitOfWork.blogRepository.GetByIdAsync(request.Id);
+            var response= await _unitOfWork.blogRepository.GetByIdAsync(request.Id);
+            if (response == null) throw new Exception("Not Found");
+            return response;
+
         }
     }
 }
