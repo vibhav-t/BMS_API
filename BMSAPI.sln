@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMSAPI", "BMSAPI\BMSAPI.csproj", "{D365123A-CC5F-447B-A452-15EF87EAEC3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMSAPI", "BMSAPI\BMSAPI.csproj", "{D365123A-CC5F-447B-A452-15EF87EAEC3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMSAPI.Entities", "BMSAPI.Entities\BMSAPI.Entities.csproj", "{34BA25D7-B428-4D10-ACE7-17BF0893AFF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMSAPI.Entities", "BMSAPI.Entities\BMSAPI.Entities.csproj", "{34BA25D7-B428-4D10-ACE7-17BF0893AFF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMSAPI.Models", "BMSAPI.Models\BMSAPI.Models.csproj", "{6B27E3BC-4244-42FA-9B42-9196F51F7303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMSAPI.Models", "BMSAPI.Models\BMSAPI.Models.csproj", "{6B27E3BC-4244-42FA-9B42-9196F51F7303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMSAPI.Repository", "BMSAPI.Repository\BMSAPI.Repository.csproj", "{034C24B1-339C-47C6-8810-AF3B6B2074F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMSAPI.Repository", "BMSAPI.Repository\BMSAPI.Repository.csproj", "{034C24B1-339C-47C6-8810-AF3B6B2074F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMSAPI.Test", "BMSAPI.Test\BMSAPI.Test.csproj", "{51012EBB-96E8-4BF9-B839-016EF6D4EC14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{034C24B1-339C-47C6-8810-AF3B6B2074F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{034C24B1-339C-47C6-8810-AF3B6B2074F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{034C24B1-339C-47C6-8810-AF3B6B2074F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51012EBB-96E8-4BF9-B839-016EF6D4EC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51012EBB-96E8-4BF9-B839-016EF6D4EC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51012EBB-96E8-4BF9-B839-016EF6D4EC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51012EBB-96E8-4BF9-B839-016EF6D4EC14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
